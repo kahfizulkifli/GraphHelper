@@ -1,7 +1,7 @@
 import fs from 'fs';
 import { exec } from 'child_process';
 import extractDataType from "./utils.js";
-import text from "./pbtxt/mlp_dp_final.js"
+import text from "./pbtxt/misc/pp_1_layers_2_graph_2.js"
 
 function parseHloToDot(text) {
     const entryIndex = text.indexOf("ENTRY");
@@ -48,7 +48,7 @@ const input = text;
 
 const dotOutput = parseHloToDot(input);
 
-const dotFile = 'mlp_dp_final.dot';
+const dotFile = 'graphs/misc/pp_1_layers_2_graph_2.dot';
 fs.writeFile(dotFile, dotOutput, (err) => {
     if (err) throw err;
     console.log('The file has been saved!');
