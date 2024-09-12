@@ -36,8 +36,13 @@ digraph HloModule {
 	"p7.29" [label="p7.29 \n f32[30522,16]"];
 	"p6.16" [label="p6.16 \n f32[1]"];
 	"p5.15" [label="p5.15 \n f32[] parameter(5), frontend_attributes="];
+	"reshape" [label="reshape \n f32[1]"];
 	"divide.18" [label="divide.18 \n f32[1]"];
 	"p4.14" [label="p4.14 \n f32[] parameter(4), frontend_attributes="];
+	"all-reduce.26" [label="all-reduce.26 \n (f32[1]"];
+	"get-tuple-element.90" [label="get-tuple-element.90 \n f32[] get-tuple-element((f32[1]"];
+	"all-reduce.95" [label="all-reduce.95 \n (f32[2]"];
+	"get-tuple-element.212" [label="get-tuple-element.212 \n f32[30522,16]"];
 	"constant.528" [label="constant.528 \n f32[] constant(1), metadata="];
 	"constant.213" [label="constant.213 \n f32[] constant(0.5), metadata="];
 	"broadcast.214" [label="broadcast.214 \n f32[30522,16]"];
@@ -47,6 +52,7 @@ digraph HloModule {
 	"reduce.485" [label="reduce.485 \n f32[] reduce(f32[30522,16]"];
 	"sqrt.486" [label="sqrt.486 \n f32[] sqrt(f32[] %reduce.485), metadata="];
 	"reshape.487" [label="reshape.487 \n f32[1]"];
+	"get-tuple-element.208" [label="get-tuple-element.208 \n f32[512,16]"];
 	"constant.209" [label="constant.209 \n f32[] constant(0.5), metadata="];
 	"broadcast.210" [label="broadcast.210 \n f32[512,16]"];
 	"multiply.211" [label="multiply.211 \n f32[512,16]"];
@@ -55,6 +61,7 @@ digraph HloModule {
 	"reduce.476" [label="reduce.476 \n f32[] reduce(f32[512,16]"];
 	"sqrt.477" [label="sqrt.477 \n f32[] sqrt(f32[] %reduce.476), metadata="];
 	"reshape.488" [label="reshape.488 \n f32[1]"];
+	"get-tuple-element.204" [label="get-tuple-element.204 \n f32[2,16]"];
 	"constant.205" [label="constant.205 \n f32[] constant(0.5), metadata="];
 	"broadcast.206" [label="broadcast.206 \n f32[2,16]"];
 	"multiply.207" [label="multiply.207 \n f32[2,16]"];
@@ -63,6 +70,7 @@ digraph HloModule {
 	"reduce.467" [label="reduce.467 \n f32[] reduce(f32[2,16]"];
 	"sqrt.468" [label="sqrt.468 \n f32[] sqrt(f32[] %reduce.467), metadata="];
 	"reshape.489" [label="reshape.489 \n f32[1]"];
+	"get-tuple-element.164" [label="get-tuple-element.164 \n f32[16]"];
 	"constant.165" [label="constant.165 \n f32[] constant(0.5), metadata="];
 	"broadcast.166" [label="broadcast.166 \n f32[16]"];
 	"multiply.167" [label="multiply.167 \n f32[16]"];
@@ -71,6 +79,7 @@ digraph HloModule {
 	"reduce.458" [label="reduce.458 \n f32[] reduce(f32[16]"];
 	"sqrt.459" [label="sqrt.459 \n f32[] sqrt(f32[] %reduce.458), metadata="];
 	"reshape.490" [label="reshape.490 \n f32[1]"];
+	"get-tuple-element.160" [label="get-tuple-element.160 \n f32[16]"];
 	"constant.161" [label="constant.161 \n f32[] constant(0.5), metadata="];
 	"broadcast.162" [label="broadcast.162 \n f32[16]"];
 	"multiply.163" [label="multiply.163 \n f32[16]"];
@@ -79,6 +88,7 @@ digraph HloModule {
 	"reduce.449" [label="reduce.449 \n f32[] reduce(f32[16]"];
 	"sqrt.450" [label="sqrt.450 \n f32[] sqrt(f32[] %reduce.449), metadata="];
 	"reshape.491" [label="reshape.491 \n f32[1]"];
+	"get-tuple-element.200" [label="get-tuple-element.200 \n f32[16,16]"];
 	"constant.201" [label="constant.201 \n f32[] constant(0.5), metadata="];
 	"broadcast.202" [label="broadcast.202 \n f32[16,16]"];
 	"multiply.203" [label="multiply.203 \n f32[16,16]"];
@@ -87,6 +97,7 @@ digraph HloModule {
 	"reduce.440" [label="reduce.440 \n f32[] reduce(f32[16,16]"];
 	"sqrt.441" [label="sqrt.441 \n f32[] sqrt(f32[] %reduce.440), metadata="];
 	"reshape.492" [label="reshape.492 \n f32[1]"];
+	"get-tuple-element.156" [label="get-tuple-element.156 \n f32[16]"];
 	"constant.157" [label="constant.157 \n f32[] constant(0.5), metadata="];
 	"broadcast.158" [label="broadcast.158 \n f32[16]"];
 	"multiply.159" [label="multiply.159 \n f32[16]"];
@@ -95,6 +106,7 @@ digraph HloModule {
 	"reduce.431" [label="reduce.431 \n f32[] reduce(f32[16]"];
 	"sqrt.432" [label="sqrt.432 \n f32[] sqrt(f32[] %reduce.431), metadata="];
 	"reshape.493" [label="reshape.493 \n f32[1]"];
+	"get-tuple-element.196" [label="get-tuple-element.196 \n f32[16,16]"];
 	"constant.197" [label="constant.197 \n f32[] constant(0.5), metadata="];
 	"broadcast.198" [label="broadcast.198 \n f32[16,16]"];
 	"multiply.199" [label="multiply.199 \n f32[16,16]"];
@@ -103,6 +115,7 @@ digraph HloModule {
 	"reduce.422" [label="reduce.422 \n f32[] reduce(f32[16,16]"];
 	"sqrt.423" [label="sqrt.423 \n f32[] sqrt(f32[] %reduce.422), metadata="];
 	"reshape.494" [label="reshape.494 \n f32[1]"];
+	"get-tuple-element.152" [label="get-tuple-element.152 \n f32[16]"];
 	"constant.153" [label="constant.153 \n f32[] constant(0.5), metadata="];
 	"broadcast.154" [label="broadcast.154 \n f32[16]"];
 	"multiply.155" [label="multiply.155 \n f32[16]"];
@@ -111,6 +124,7 @@ digraph HloModule {
 	"reduce.413" [label="reduce.413 \n f32[] reduce(f32[16]"];
 	"sqrt.414" [label="sqrt.414 \n f32[] sqrt(f32[] %reduce.413), metadata="];
 	"reshape.495" [label="reshape.495 \n f32[1]"];
+	"get-tuple-element.192" [label="get-tuple-element.192 \n f32[16,16]"];
 	"constant.193" [label="constant.193 \n f32[] constant(0.5), metadata="];
 	"broadcast.194" [label="broadcast.194 \n f32[16,16]"];
 	"multiply.195" [label="multiply.195 \n f32[16,16]"];
@@ -119,6 +133,7 @@ digraph HloModule {
 	"reduce.404" [label="reduce.404 \n f32[] reduce(f32[16,16]"];
 	"sqrt.405" [label="sqrt.405 \n f32[] sqrt(f32[] %reduce.404), metadata="];
 	"reshape.496" [label="reshape.496 \n f32[1]"];
+	"get-tuple-element.148" [label="get-tuple-element.148 \n f32[16]"];
 	"constant.149" [label="constant.149 \n f32[] constant(0.5), metadata="];
 	"broadcast.150" [label="broadcast.150 \n f32[16]"];
 	"multiply.151" [label="multiply.151 \n f32[16]"];
@@ -127,6 +142,7 @@ digraph HloModule {
 	"reduce.395" [label="reduce.395 \n f32[] reduce(f32[16]"];
 	"sqrt.396" [label="sqrt.396 \n f32[] sqrt(f32[] %reduce.395), metadata="];
 	"reshape.497" [label="reshape.497 \n f32[1]"];
+	"get-tuple-element.188" [label="get-tuple-element.188 \n f32[16,16]"];
 	"constant.189" [label="constant.189 \n f32[] constant(0.5), metadata="];
 	"broadcast.190" [label="broadcast.190 \n f32[16,16]"];
 	"multiply.191" [label="multiply.191 \n f32[16,16]"];
@@ -135,6 +151,7 @@ digraph HloModule {
 	"reduce.386" [label="reduce.386 \n f32[] reduce(f32[16,16]"];
 	"sqrt.387" [label="sqrt.387 \n f32[] sqrt(f32[] %reduce.386), metadata="];
 	"reshape.498" [label="reshape.498 \n f32[1]"];
+	"get-tuple-element.144" [label="get-tuple-element.144 \n f32[16]"];
 	"constant.145" [label="constant.145 \n f32[] constant(0.5), metadata="];
 	"broadcast.146" [label="broadcast.146 \n f32[16]"];
 	"multiply.147" [label="multiply.147 \n f32[16]"];
@@ -143,6 +160,7 @@ digraph HloModule {
 	"reduce.377" [label="reduce.377 \n f32[] reduce(f32[16]"];
 	"sqrt.378" [label="sqrt.378 \n f32[] sqrt(f32[] %reduce.377), metadata="];
 	"reshape.499" [label="reshape.499 \n f32[1]"];
+	"get-tuple-element.140" [label="get-tuple-element.140 \n f32[16]"];
 	"constant.141" [label="constant.141 \n f32[] constant(0.5), metadata="];
 	"broadcast.142" [label="broadcast.142 \n f32[16]"];
 	"multiply.143" [label="multiply.143 \n f32[16]"];
@@ -151,6 +169,7 @@ digraph HloModule {
 	"reduce.368" [label="reduce.368 \n f32[] reduce(f32[16]"];
 	"sqrt.369" [label="sqrt.369 \n f32[] sqrt(f32[] %reduce.368), metadata="];
 	"reshape.500" [label="reshape.500 \n f32[1]"];
+	"get-tuple-element.136" [label="get-tuple-element.136 \n f32[16]"];
 	"constant.137" [label="constant.137 \n f32[] constant(0.5), metadata="];
 	"broadcast.138" [label="broadcast.138 \n f32[16]"];
 	"multiply.139" [label="multiply.139 \n f32[16]"];
@@ -159,6 +178,7 @@ digraph HloModule {
 	"reduce.359" [label="reduce.359 \n f32[] reduce(f32[16]"];
 	"sqrt.360" [label="sqrt.360 \n f32[] sqrt(f32[] %reduce.359), metadata="];
 	"reshape.501" [label="reshape.501 \n f32[1]"];
+	"get-tuple-element.184" [label="get-tuple-element.184 \n f32[4096,16]"];
 	"constant.185" [label="constant.185 \n f32[] constant(0.5), metadata="];
 	"broadcast.186" [label="broadcast.186 \n f32[4096,16]"];
 	"multiply.187" [label="multiply.187 \n f32[4096,16]"];
@@ -167,6 +187,7 @@ digraph HloModule {
 	"reduce.350" [label="reduce.350 \n f32[] reduce(f32[4096,16]"];
 	"sqrt.351" [label="sqrt.351 \n f32[] sqrt(f32[] %reduce.350), metadata="];
 	"reshape.502" [label="reshape.502 \n f32[1]"];
+	"get-tuple-element.132" [label="get-tuple-element.132 \n f32[4096]"];
 	"constant.133" [label="constant.133 \n f32[] constant(0.5), metadata="];
 	"broadcast.134" [label="broadcast.134 \n f32[4096]"];
 	"multiply.135" [label="multiply.135 \n f32[4096]"];
@@ -175,6 +196,7 @@ digraph HloModule {
 	"reduce.341" [label="reduce.341 \n f32[] reduce(f32[4096]"];
 	"sqrt.342" [label="sqrt.342 \n f32[] sqrt(f32[] %reduce.341), metadata="];
 	"reshape.503" [label="reshape.503 \n f32[1]"];
+	"get-tuple-element.180" [label="get-tuple-element.180 \n f32[16,4096]"];
 	"constant.181" [label="constant.181 \n f32[] constant(0.5), metadata="];
 	"broadcast.182" [label="broadcast.182 \n f32[16,4096]"];
 	"multiply.183" [label="multiply.183 \n f32[16,4096]"];
@@ -183,6 +205,7 @@ digraph HloModule {
 	"reduce.332" [label="reduce.332 \n f32[] reduce(f32[16,4096]"];
 	"sqrt.333" [label="sqrt.333 \n f32[] sqrt(f32[] %reduce.332), metadata="];
 	"reshape.504" [label="reshape.504 \n f32[1]"];
+	"get-tuple-element.128" [label="get-tuple-element.128 \n f32[16]"];
 	"constant.129" [label="constant.129 \n f32[] constant(0.5), metadata="];
 	"broadcast.130" [label="broadcast.130 \n f32[16]"];
 	"multiply.131" [label="multiply.131 \n f32[16]"];
@@ -191,6 +214,7 @@ digraph HloModule {
 	"reduce.323" [label="reduce.323 \n f32[] reduce(f32[16]"];
 	"sqrt.324" [label="sqrt.324 \n f32[] sqrt(f32[] %reduce.323), metadata="];
 	"reshape.505" [label="reshape.505 \n f32[1]"];
+	"get-tuple-element.124" [label="get-tuple-element.124 \n f32[16]"];
 	"constant.125" [label="constant.125 \n f32[] constant(0.5), metadata="];
 	"broadcast.126" [label="broadcast.126 \n f32[16]"];
 	"multiply.127" [label="multiply.127 \n f32[16]"];
@@ -199,6 +223,7 @@ digraph HloModule {
 	"reduce.314" [label="reduce.314 \n f32[] reduce(f32[16]"];
 	"sqrt.315" [label="sqrt.315 \n f32[] sqrt(f32[] %reduce.314), metadata="];
 	"reshape.506" [label="reshape.506 \n f32[1]"];
+	"get-tuple-element.120" [label="get-tuple-element.120 \n f32[16]"];
 	"constant.121" [label="constant.121 \n f32[] constant(0.5), metadata="];
 	"broadcast.122" [label="broadcast.122 \n f32[16]"];
 	"multiply.123" [label="multiply.123 \n f32[16]"];
@@ -207,6 +232,7 @@ digraph HloModule {
 	"reduce.305" [label="reduce.305 \n f32[] reduce(f32[16]"];
 	"sqrt.306" [label="sqrt.306 \n f32[] sqrt(f32[] %reduce.305), metadata="];
 	"reshape.507" [label="reshape.507 \n f32[1]"];
+	"get-tuple-element.176" [label="get-tuple-element.176 \n f32[16,16]"];
 	"constant.177" [label="constant.177 \n f32[] constant(0.5), metadata="];
 	"broadcast.178" [label="broadcast.178 \n f32[16,16]"];
 	"multiply.179" [label="multiply.179 \n f32[16,16]"];
@@ -215,6 +241,7 @@ digraph HloModule {
 	"reduce.296" [label="reduce.296 \n f32[] reduce(f32[16,16]"];
 	"sqrt.297" [label="sqrt.297 \n f32[] sqrt(f32[] %reduce.296), metadata="];
 	"reshape.508" [label="reshape.508 \n f32[1]"];
+	"get-tuple-element.116" [label="get-tuple-element.116 \n f32[16]"];
 	"constant.117" [label="constant.117 \n f32[] constant(0.5), metadata="];
 	"broadcast.118" [label="broadcast.118 \n f32[16]"];
 	"multiply.119" [label="multiply.119 \n f32[16]"];
@@ -223,6 +250,7 @@ digraph HloModule {
 	"reduce.287" [label="reduce.287 \n f32[] reduce(f32[16]"];
 	"sqrt.288" [label="sqrt.288 \n f32[] sqrt(f32[] %reduce.287), metadata="];
 	"reshape.509" [label="reshape.509 \n f32[1]"];
+	"get-tuple-element.112" [label="get-tuple-element.112 \n f32[30522]"];
 	"constant.113" [label="constant.113 \n f32[] constant(0.5), metadata="];
 	"broadcast.114" [label="broadcast.114 \n f32[30522]"];
 	"multiply.115" [label="multiply.115 \n f32[30522]"];
@@ -231,6 +259,7 @@ digraph HloModule {
 	"reduce.278" [label="reduce.278 \n f32[] reduce(f32[30522]"];
 	"sqrt.279" [label="sqrt.279 \n f32[] sqrt(f32[] %reduce.278), metadata="];
 	"reshape.510" [label="reshape.510 \n f32[1]"];
+	"get-tuple-element.172" [label="get-tuple-element.172 \n f32[16,16]"];
 	"constant.173" [label="constant.173 \n f32[] constant(0.5), metadata="];
 	"broadcast.174" [label="broadcast.174 \n f32[16,16]"];
 	"multiply.175" [label="multiply.175 \n f32[16,16]"];
@@ -239,6 +268,7 @@ digraph HloModule {
 	"reduce.269" [label="reduce.269 \n f32[] reduce(f32[16,16]"];
 	"sqrt.270" [label="sqrt.270 \n f32[] sqrt(f32[] %reduce.269), metadata="];
 	"reshape.511" [label="reshape.511 \n f32[1]"];
+	"get-tuple-element.108" [label="get-tuple-element.108 \n f32[16]"];
 	"constant.109" [label="constant.109 \n f32[] constant(0.5), metadata="];
 	"broadcast.110" [label="broadcast.110 \n f32[16]"];
 	"multiply.111" [label="multiply.111 \n f32[16]"];
@@ -247,6 +277,7 @@ digraph HloModule {
 	"reduce.260" [label="reduce.260 \n f32[] reduce(f32[16]"];
 	"sqrt.261" [label="sqrt.261 \n f32[] sqrt(f32[] %reduce.260), metadata="];
 	"reshape.512" [label="reshape.512 \n f32[1]"];
+	"get-tuple-element.104" [label="get-tuple-element.104 \n f32[16]"];
 	"constant.105" [label="constant.105 \n f32[] constant(0.5), metadata="];
 	"broadcast.106" [label="broadcast.106 \n f32[16]"];
 	"multiply.107" [label="multiply.107 \n f32[16]"];
@@ -255,6 +286,7 @@ digraph HloModule {
 	"reduce.251" [label="reduce.251 \n f32[] reduce(f32[16]"];
 	"sqrt.252" [label="sqrt.252 \n f32[] sqrt(f32[] %reduce.251), metadata="];
 	"reshape.513" [label="reshape.513 \n f32[1]"];
+	"get-tuple-element.100" [label="get-tuple-element.100 \n f32[16]"];
 	"constant.101" [label="constant.101 \n f32[] constant(0.5), metadata="];
 	"broadcast.102" [label="broadcast.102 \n f32[16]"];
 	"multiply.103" [label="multiply.103 \n f32[16]"];
@@ -263,6 +295,7 @@ digraph HloModule {
 	"reduce.242" [label="reduce.242 \n f32[] reduce(f32[16]"];
 	"sqrt.243" [label="sqrt.243 \n f32[] sqrt(f32[] %reduce.242), metadata="];
 	"reshape.514" [label="reshape.514 \n f32[1]"];
+	"get-tuple-element.168" [label="get-tuple-element.168 \n f32[2,16]"];
 	"constant.169" [label="constant.169 \n f32[] constant(0.5), metadata="];
 	"broadcast.170" [label="broadcast.170 \n f32[2,16]"];
 	"multiply.171" [label="multiply.171 \n f32[2,16]"];
@@ -271,6 +304,7 @@ digraph HloModule {
 	"reduce.233" [label="reduce.233 \n f32[] reduce(f32[2,16]"];
 	"sqrt.234" [label="sqrt.234 \n f32[] sqrt(f32[] %reduce.233), metadata="];
 	"reshape.515" [label="reshape.515 \n f32[1]"];
+	"get-tuple-element.96" [label="get-tuple-element.96 \n f32[2]"];
 	"constant.97" [label="constant.97 \n f32[] constant(0.5), metadata="];
 	"broadcast.98" [label="broadcast.98 \n f32[2]"];
 	"multiply.99" [label="multiply.99 \n f32[2]"];
@@ -290,6 +324,8 @@ digraph HloModule {
 	"compare.532" [label="compare.532 \n pred[] compare(f32[] %divide.529, f32[] %constant), direction=LT, metadata="];
 	"constant.11" [label="constant.11 \n f32[] constant(1), metadata="];
 	"select.533" [label="select.533 \n f32[] select(pred[] %compare.532, f32[] %divide.529, f32[] %constant.11), metadata="];
+	"multiply" [label="multiply \n f32[] multiply(f32[] %select.533, f32[] %constant.213), metadata="];
+	"broadcast" [label="broadcast \n f32[30522,16]"];
 	"multiply.535" [label="multiply.535 \n f32[30522,16]"];
 	"p39.547" [label="p39.547 \n f32[] parameter(39), frontend_attributes="];
 	"broadcast.551" [label="broadcast.551 \n f32[30522,16]"];
@@ -1046,6 +1082,7 @@ digraph HloModule {
 	"multiply.1441" [label="multiply.1441 \n f32[2]"];
 	"add.1442" [label="add.1442 \n f32[2]"];
 	"constant.1" [label="constant.1 \n f32[1]"];
+	"get-tuple-element.27" [label="get-tuple-element.27 \n f32[1]"];
 	"constant.2" [label="constant.2 \n f32[1]"];
 	"tuple.1449" [label="tuple.1449 \n (f32[30522,16]"]; 
  	"p40.553" -> "broadcast.555";

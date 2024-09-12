@@ -1,7 +1,7 @@
 import fs from 'fs';
 import { exec } from 'child_process';
 import extractDataType from "./utils.js";
-import text from "./pbtxt/qwb_linear_model/pp_2_layers_2_rank_0.js"
+import text from "./pbtxt/llama/tp_8.js"
 
 function parseHloToDot(text) {
     const entryIndex = text.indexOf("ENTRY");
@@ -48,7 +48,7 @@ const input = text;
 
 const dotOutput = parseHloToDot(input);
 
-const dotFile = 'graphs/qwb_linear_model/pp_2_layers_2_2nd_graph.dot';
+const dotFile = 'graphs/llama/tp_8.dot';
 fs.writeFile(dotFile, dotOutput, (err) => {
     if (err) throw err;
     console.log('The file has been saved!');

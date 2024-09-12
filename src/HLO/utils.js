@@ -1,5 +1,6 @@
 function extractDataType(line) {
-    const regex = /%(\w+\.\d+)\s*=\s*([^{}]+)\s*\{/;
+    // const regex = /%([a-zA-Z0-9_-]+\.\d+)\s*=\s*([^{}]+)\s*\{/;
+    const regex = /%([^\\]+)\s=\s*([^{}]+)\s*\{/;
     const match = line.match(regex);
 
     if (match && match.length >= 3) {
@@ -12,8 +13,8 @@ function extractDataType(line) {
     }
 }
 
-// const textLine = "%broadcast.154 = f32[4096,4]{1,0} broadcast(f32[4096]{0} %custom-call.141), dimensions={0}";
-//
+// const textLine = "%multiply = f32[] multiply(f32[] %p0.1, f32[] %constant.329), metadata={";
+// // 
 // const result = extractDataType(textLine);
 // console.log(result);
 

@@ -1,0 +1,4 @@
+digraph HloModule {
+	"get-tuple-element.328" [label="get-tuple-element.328 \n f32[120,784]"]; 
+ 	"all-reduce.307" -> "get-tuple-element.328";
+}
